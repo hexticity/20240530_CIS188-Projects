@@ -10,6 +10,8 @@ The program will keep running until the user decides to exit.
 It also includes a for loop that iterates a random number of times to display a message.
 """
 
+import random
+
 while True:
     # Ask for the user's name
     name = input("What is your name? ")
