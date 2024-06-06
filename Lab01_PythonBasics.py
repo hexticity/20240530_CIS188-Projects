@@ -6,26 +6,20 @@ Description: The following program will ask the user three questions, output the
 message that possesses a newly calculated age based on a designed equation (length of name + inputted age = new age)
 """
 
-# Function to get user input and print the desired output
-def main():
-    # Asking for the user's name
-    name = input("What is your name? ")
-    
-    # Greeting the user
-    print(f"Hello, {name}")
-    
-    # Asking for the user's age
-    age = int(input("What is your age? "))
+# Asking for the user's name
+name = input("What is your name? ")
 
-    # Calculate the length of the name
-    name_len = len(name)
-    
-    # Calculating the new age based on the length of the name
-    new_age = age + name_len
-    
-    # Printing the final message
-    print(f"{name}, if we add the number of letters in your name to your age then you will be {new_age} in {name_len} years.")
+# Greeting the user
+print("Hello, " + name)
 
-# Calling the main function
-if __name__ == "__main__":
-    main()
+# Asking for the user's age
+age = int(input("What is your age? "))
+
+# Calculate the length of the name
+name_len = len(name)
+
+# Calculating the new age based on the length of the name
+new_age = age + name_len
+
+# Printing the final message
+print(name + ", if we add the number of letters in your name to your age then you will be " + str(new_age) + " in " + str(name_len) + " years.")
