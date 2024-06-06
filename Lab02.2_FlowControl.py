@@ -10,30 +10,31 @@ The program will keep running until the user decides to exit.
 It also includes a for loop that iterates a random number of times to display a message.
 """
 
-# Ask for the user's name
-name = input("What is your name? ")
+while True:
+    # Ask for the user's name
+    name = input("What is your name? ")
 
-# Ask the first question
-favorite_color = input("What is your favorite color? ")
+    # Ask the first question
+    favorite_color = input("What is your favorite color? ")
 
-# Ask the second question
-pet_preference = input("Do you prefer cats or dogs? ")
+    # Ask the second question
+    pet_preference = input("Do you prefer cats or dogs? ")
 
-# Decision structure for favorite color
-if favorite_color == 'blue':
-    color_message = "Blue is a calming color!"
-elif favorite_color == 'red':
-    color_message = "Red is full of energy and passion!"
-else:
-    color_message = favorite_color + " is a unique choice!"
+    # Decision structure for favorite color
+    if favorite_color == 'blue':
+        color_message = "Blue is a calming color!"
+    elif favorite_color == 'red':
+        color_message = "Red is full of energy and passion!"
+    else:
+        color_message = favorite_color + " is a unique choice!"
 
-# Decision structure for pet preference
-if pet_preference == 'cats':
-    pet_message = "Cats are great companions and very independent."
-elif pet_preference == 'dogs':
-    pet_message = "Dogs are loyal and always ready for an adventure."
-else:
-    pet_message = "It's great to have diverse pet preferences!"
+    # Decision structure for pet preference
+    if pet_preference == 'cats':
+        pet_message = "Cats are great companions and very independent."
+    elif pet_preference == 'dogs':
+        pet_message = "Dogs are loyal and always ready for an adventure."
+    else:
+        pet_message = "It's great to have diverse pet preferences!"
 
-# Combine the responses and display the custom message
-print("Hello, " + name + "! " + color_message + " " + pet_message)
+    # Combine the responses and display the custom message
+    print("Hello, " + name + "! " + color_message + " " + pet_message)
