@@ -9,7 +9,6 @@ The program demonstrates the use of if/else and if/elif/else statements to handl
 The program will keep running until the user decides to exit.
 It also includes a for loop that iterates a random number of times to display a message.
 """
-
 import random
 
 while True:
@@ -39,15 +38,15 @@ while True:
         pet_message = "It's great to have diverse pet preferences!"
 
     # Combine the responses and display the custom message
+    print("Hello, " + name + "! " + color_message + " " + pet_message)
 
-   # For loop that iterates a random number of times
+    # For loop that iterates a random number of times
     random_times = random.randint(1, 10)
     for i in range(random_times):
-        print(f"Yeehaw! {i+1}")
+        print(f"Yeehaw! {i + 1}")
 
     # Ask the user if they want to run the program again
     continue_program = input("Do you want to continue? (yes/no) ")
-    if continue_program.lower() != 'yes':
+    if continue_program == 'no':
         print("Goodbye!")
         break
-    print("Hello, " + name + "! " + color_message + " " + pet_message)
