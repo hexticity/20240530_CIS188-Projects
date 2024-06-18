@@ -18,8 +18,12 @@ def collatz(number):
   print(result) # Print the result
   return result # Return the result
 
+# Print a welcome message to the user
 print("Welcome to the simplest impossible math problem, the Collatz Sequence!")
+
+# Prompt the user to enter a positive number and convert the input to an integer
 number = int(input("Please enter a positive number: "))
 
+# Continue calling collatz() and updating the number until it becomes 1
 while number != 1:
     number = collatz(number)
