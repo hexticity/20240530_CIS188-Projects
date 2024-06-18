@@ -12,3 +12,10 @@ def collatz(number):
   # Check if the inputted number is even
   if number % 2 == 0:
     result = number // 2
+  else:
+    # Check if the inputted number is odd
+    result = 3 * number + 1
+  # Print the result
+  print(result) 
+  # Return the result
+  return result
