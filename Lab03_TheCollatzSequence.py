@@ -18,7 +18,7 @@ def collatz(number):
   print(result) # Print the result
   return result # Return the result
 
-print("Welcome to the Collatz Sequence calculator.")
+print("Welcome to the simplest impossible math problem, the Collatz Sequence!")
 number = int(input("Please enter a positive number: "))
 
 while number != 1:
