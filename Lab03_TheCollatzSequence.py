@@ -17,3 +17,9 @@ def collatz(number):
     result = 3 * number + 1
   print(result) # Print the result
   return result # Return the result
+
+print("Welcome to the Collatz Sequence calculator.")
+number = int(input("Please enter a positive number: "))
+
+while number != 1:
+    number = collatz(number)
