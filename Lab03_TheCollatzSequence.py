@@ -15,7 +15,5 @@ def collatz(number):
   else:
     # Check if the inputted number is odd
     result = 3 * number + 1
-  # Print the result
-  print(result) 
-  # Return the result
-  return result
+  print(result) # Print the result
+  return result # Return the result
