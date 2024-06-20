@@ -43,7 +43,7 @@ while True:
     # For loop that iterates a random number of times
     random_times = random.randint(1, 10)
     for i in range(random_times):
-        print(f"Yeehaw! {i + 1}")
+        print("Yeehaw! " + str(i + 1))
 
     # Ask the user if they want to run the program again
     continue_program = input("Do you want to continue? (yes/no) ")
