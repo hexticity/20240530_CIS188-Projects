@@ -6,7 +6,7 @@ Description: This program simulates the flipping of a coin 100 times and checks 
              The experiment is repeated 10,000 times to estimate the probability of such streaks occurring.
 """
 
-import random
+import random  # This may be beyond Chapter 4 if it's not covered
 
 # Constants
 EXPERIMENTS = 10000  # Number of experiments to perform
@@ -19,7 +19,7 @@ for experimentNumber in range(EXPERIMENTS):
     # Generate a list of 100 random 'H' (heads) or 'T' (tails) values
     flips = []
     for i in range(LIST_SIZE):
-        if random.randint(0, 1) == 0:
+        if random.randint(0, 1) == 0:  # Using random module
             flips.append('H')
         else:
             flips.append('T')
@@ -41,4 +41,5 @@ for experimentNumber in range(EXPERIMENTS):
 
 # Calculate and print the percentage of lists containing a streak
 chance_of_streak = (numberOfListsWithStreaks / EXPERIMENTS) * 100
-print('Chance of streak: %.2f%%' % chance_of_streak)
+print('Chance of streak: ' + str(chance_of_streak) + '%')  # Using concatenation instead of formatted string
+
