@@ -32,7 +32,7 @@ def main():
     # Initial setup of the player's inventory
     current_inventory = {'rope': 1, 'gold coin': 42, 'dagger': 1}
     # Items found after defeating a dragon
-    dragon_loot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+    dragon_loot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby', 'mystic wand', 'dragon heart']
 
     print("Initial Inventory:")
     displayInventory(current_inventory)
