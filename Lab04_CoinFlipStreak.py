@@ -41,5 +41,5 @@ for experimentNumber in range(EXPERIMENTS):
 
 # Calculate and print the percentage of lists containing a streak
 chance_of_streak = (numberOfListsWithStreaks / EXPERIMENTS) * 100
-print('Chance of streak: %s%%' % ((numberOfListsWithStreaks / EXPERIMENTS)*100))  # Using concatenation instead of formatted string
+print('Chance of streak: %s%%' % ((numberOfListsWithStreaks / EXPERIMENTS) * 100))  # Using concatenation instead of formatted string
 
