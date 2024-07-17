@@ -25,3 +25,17 @@ if not os.path.exists(images_dir):
 
 if not os.path.exists(pdf_dir):
     os.makedirs(pdf_dir)
+
+# Traverse the base directory
+
+# Check the file extension and move accordingly
+# If file ends with .pdf, move to pdf_dir
+# If file ends with .jpg, move to images_dir
+
+# Print the directory listing for images and pdf folders
+# List and print all files in images_dir
+# List and print all files in pdf_dir
+
+# Display the total number of files in each folder
+# Count and print the total number of files in images_dir
+# Count and print the total number of files in pdf_dir
