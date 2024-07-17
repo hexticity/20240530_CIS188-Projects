@@ -1,3 +1,16 @@
+"""
+Author: Raymond Llamas
+Course: PCC - CIS188 - Scripting for Automation
+Instructor: P. Farmer
+Description: 
+This program asks users for their sandwich preferences, validates their input using PyInputPlus,
+and calculates the total cost of the sandwiches. The program includes the following features:
+1. Uses inputMenu() for selecting bread and protein types.
+2. Uses inputYesNo() for asking if cheese is desired and for selecting extras.
+3. Uses inputInt() to ask how many sandwiches are wanted.
+4. Calculates the total cost based on user selections and displays the order summary.
+
+"""
 
 
 import pyinputplus as pyip
