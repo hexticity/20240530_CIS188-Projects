@@ -11,31 +11,52 @@ This program organizes files into designated folders based on their file types. 
 
 """
 
-import os # Helps us interact with the operating system
-import shutil # Helps us move files
+import os
+import shutil
+from pathlib import Path
+import zipfile
 
-# Define the paths for the directories
-base_dir = 'files'  # This is the directory where your files are located
-images_dir = 'images'  # This will be the directory for image files
-pdf_dir = 'pdf'  # This will be the directory for PDF files
+# Step 1: Unzip the file
+# This block of code will unzip the 'files.zip' archive into a directory named 'files'
+zip_file = 'files.zip'
+with zipfile.ZipFile(zip_file, 'r') as zip_ref:
+    zip_ref.extractall('files')
 
-# Create the images and pdf directories if they do not exist
-if not os.path.exists(images_dir):
-    os.makedirs(images_dir)
+# Step 2: Create directories for images and pdfs
+# Define the base directory where files are extracted
+base_dir = Path('files')
 
-if not os.path.exists(pdf_dir):
-    os.makedirs(pdf_dir)
+# Define the paths for the new directories 'images' and 'pdf'
+images_dir = base_dir.parent / 'images'
+pdf_dir = base_dir.parent / 'pdf'
 
-# Traverse the base directory
+# Create the 'images' and 'pdf' directories if they don't already exist
+images_dir.mkdir(exist_ok=True)
+pdf_dir.mkdir(exist_ok=True)
 
-# Check the file extension and move accordingly
-# If file ends with .pdf, move to pdf_dir
-# If file ends with .jpg, move to images_dir
+# Step 3: Walk through the directory tree and move files
+# Use os.walk to go through each directory and subdirectory in the 'files' directory
+for root, _, files in os.walk(base_dir):
+    for file in files:
+        file_path = Path(root) / file  # Get the full path of the current file
+        # Check the file extension and move to the appropriate directory
+        if file_path.suffix == '.jpg':
+            shutil.move(str(file_path), str(images_dir / file_path.name))
+        elif file_path.suffix == '.pdf':
+            shutil.move(str(file_path), str(pdf_dir / file_path.name))
 
-# Print the directory listing for images and pdf folders
-# List and print all files in images_dir
-# List and print all files in pdf_dir
+# Step 4: Print directory listings and the total number of files
+# Define a function to print the contents of a directory and count the files
+def print_directory_listing_and_count(directory):
+    print(f"\nDirectory listing for {directory}:")  # Print the directory name
+    file_count = 0  # Initialize a counter for the number of files
+    # Use os.walk to go through each directory and subdirectory
+    for root, _, files in os.walk(directory):
+        for file in files:
+            print(file)  # Print each file name
+            file_count += 1  # Increment the file counter
+    print(f"Total number of files in {directory}: {file_count}")  # Print the total count of files
 
-# Display the total number of files in each folder
-# Count and print the total number of files in images_dir
-# Count and print the total number of files in pdf_dir
+# Print the listings and counts for the 'images' and 'pdf' directories
+print_directory_listing_and_count(images_dir)
+print_directory_listing_and_count(pdf_dir)
